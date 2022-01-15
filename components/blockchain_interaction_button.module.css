@@ -1,0 +1,78 @@
+.button {
+  position: relative;
+}
+
+@keyframes breathe {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes build {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 54px;
+  }
+}
+
+.waitingConfirmation,
+.mining,
+.confirmed {
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.waitingConfirmation:after {
+  position: absolute !important;
+  left: calc(50% - (18px * 0.5));
+  top: calc(50% - (18px * 0.5));
+  content: "";
+  height: 18px;
+  width: 18px;
+  background-size: 18px 18px;
+  -webkit-animation: breathe 750ms infinite alternate ease-in-out;
+  animation: breathe 750ms infinite alternate ease-in-out;
+}
+
+.waitingConfirmation.metamask:after {
+  background-image: url("/metamask.png");
+}
+
+.waitingConfirmation.coinbase:after {
+  background-image: url("/coinbase.png");
+}
+
+.waitingConfirmation.phantom:after {
+  background-image: url("/phantom.png");
+}
+
+.mining:after {
+  position: absolute !important;
+  left: calc(50% - (54px * 0.5));
+  top: calc(50% - (18px * 0.5));
+  content: "";
+  height: 18px;
+  background-image: url("/blockchain.png");
+  background-size: 55px 18px;
+  opacity: 0.7;
+  -webkit-animation: build 1500ms infinite steps(5, start);
+  animation: build 1500ms infinite steps(5, start);
+}
+
+.confirmed:after {
+  position: absolute !important;
+  left: calc(50% - (18px * 0.5));
+  top: calc(50% - (18px * 0.5));
+  content: "";
+  height: 18px;
+  width: 18px;
+  background-image: url("/confirmed.png");
+  background-size: 18px 18px;
+  -webkit-animation: breathe 1500ms ease-in-out;
+  animation: breathe 1500ms ease-in-out;
+}

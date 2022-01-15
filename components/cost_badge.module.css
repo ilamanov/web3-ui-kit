@@ -1,0 +1,65 @@
+.container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.badgeContainer {
+  height: 23px;
+  border-radius: 11.5px;
+  position: absolute;
+  right: -11.5px;
+  top: -11.5px;
+}
+
+.badgeContainer:hover {
+  cursor: default;
+}
+
+.ethereum {
+  background-color: #62688f;
+  color: black;
+}
+
+.solana {
+  background: -webkit-linear-gradient(25deg, #9945ff, #14f195);
+  color: black;
+}
+
+.badge {
+  max-width: 23px;
+  transition: max-width 500ms;
+  /* flex for centering text vertically */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+.badgeContainer:hover .badge {
+  max-width: 120px;
+}
+
+.imgContainer {
+  width: 23px;
+  height: 23px;
+  transition: transform 1000ms;
+}
+
+.badgeContainer:hover .imgContainer {
+  transform: rotateY(360deg);
+}
+
+.textContainer {
+  line-height: 23px;
+  font-size: 15px;
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+  display: none;
+  padding: 0 5px;
+}
+
+.badgeContainer:hover .textContainer {
+  display: block;
+}

@@ -1,0 +1,27 @@
+.account {
+  margin: 0 3px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #fffffe;
+  color: #fffffe;
+}
+.account:hover {
+  cursor: pointer;
+}
+
+.isAccountMine {
+  color: white;
+  border: none;
+}
+
+.metamask {
+  background: -webkit-linear-gradient(left, #ea7b1b, #763d16);
+}
+
+.coinbase {
+  background: -webkit-linear-gradient(left, #4480ff, #0439c2);
+}
+
+.phantom {
+  background: -webkit-linear-gradient(left, #926fff, #5134c9);
+}

@@ -1,0 +1,49 @@
+.button {
+  border: 1px solid #0e0d16;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 0.3em 0.5em;
+  display: flex;
+}
+
+.pending {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.connected {
+  cursor: not-allowed;
+}
+
+.metamask {
+  background: -webkit-linear-gradient(left, #ea7b1b, #763d16);
+}
+
+.coinbase {
+  background: -webkit-linear-gradient(left, #4480ff, #0439c2);
+}
+
+.phantom {
+  background: -webkit-linear-gradient(left, #926fff, #5134c9);
+}
+
+.buttonImage {
+  display: inline-block;
+  margin-right: 0.7em;
+  height: 42px;
+}
+
+.buttonText {
+  display: inline-block;
+  width: 9ch;
+  height: 42px;
+  text-align: left;
+}
+
+.connected .buttonText {
+  width: 11ch;
+}
